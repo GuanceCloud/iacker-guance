@@ -1,0 +1,20 @@
+syntax = "proto3";
+
+package pkg.resources.dashboard.v1;
+
+option go_package = "github.com/GuanceCloud/openapi/pkg/resources/dashboard/v1;v1";
+
+/*
+*/
+message Dashboard {
+
+	/*
+	Dashboard Name
+	*/
+	string name = 1;
+
+	/*
+	Dashboard Manifest
+	*/
+	string manifest = 2;
+}

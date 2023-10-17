@@ -1,0 +1,43 @@
+syntax = "proto3";
+
+package pkg.resources.monitor.v1;
+
+option go_package = "github.com/GuanceCloud/openapi/pkg/resources/monitor/v1;v1";
+
+/*
+*/
+message AlertPolicy {
+
+	/*
+	Alert Policy ID
+	*/
+	optional string id = 1;
+}
+/*
+*/
+message Dashboard {
+
+	/*
+	Dashboard ID
+	*/
+	optional string id = 1;
+}
+/*
+*/
+message Monitor {
+
+	/*
+	Monitor Configuration
+	*/
+	string manifest = 1;
+
+	/*
+	Alert Policy Configuration
+	*/
+	AlertPolicy alert_policy = 2;
+
+	/*
+	Dashboard Configuration
+	*/
+	Dashboard dashboard = 3;
+}

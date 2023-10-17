@@ -1,0 +1,67 @@
+syntax = "proto3";
+
+package pkg.resources.alertpolicy.v1;
+
+option go_package = "github.com/GuanceCloud/openapi/pkg/resources/alertpolicy/v1;v1";
+
+/*
+*/
+message AlertPolicy {
+
+	/*
+	Alert Policy Name
+	*/
+	string name = 1;
+
+	/*
+	Silent timeout timestamp
+	*/
+	optional string silent_timeout = 2;
+
+	/*
+	The status value of the event to be sent
+	*/
+	repeated string statuses = 3;
+
+	/*
+	Alert Action
+	*/
+	repeated AlertTarget alert_targets = 4;
+}
+/*
+*/
+message AlertTarget {
+
+	/*
+	Alert type
+	*/
+	string type = 1;
+
+	/*
+	Notification
+	*/
+	TargetNotification notification = 2;
+
+	/*
+	Member Group
+	*/
+	TargetMemberGroup member_group = 3;
+}
+/*
+*/
+message TargetMemberGroup {
+
+	/*
+	Member Group
+	*/
+	string id = 1;
+}
+/*
+*/
+message TargetNotification {
+
+	/*
+	Notification
+	*/
+	string id = 1;
+}

@@ -1,0 +1,114 @@
+syntax = "proto3";
+
+package pkg.resources.notification.v1;
+
+option go_package = "github.com/GuanceCloud/openapi/pkg/resources/notification/v1;v1";
+
+/*
+*/
+message DingTalkRobot {
+
+	/*
+	DingTalk Robot Call Address
+	*/
+	string webhook = 1;
+
+	/*
+	DingTalk Robot Call Secret
+	*/
+	string secret = 2;
+}
+/*
+*/
+message FeishuRobot {
+
+	/*
+	Feishu Robot Call Address
+	*/
+	string webhook = 1;
+
+	/*
+	Feishu Robot Call Secret
+	*/
+	string secret = 2;
+}
+/*
+*/
+message HTTPRequest {
+
+	/*
+	HTTP Call Address
+	*/
+	string url = 1;
+}
+/*
+*/
+message MailGroup {
+
+	/*
+	Member Account List
+	*/
+	repeated string to = 1;
+}
+/*
+*/
+message Notification {
+
+	/*
+	Notification object name
+	*/
+	string name = 1;
+
+	/*
+	Trigger rule type
+	*/
+	string type = 2;
+
+	/*
+	DingTalk Robot
+	*/
+	DingTalkRobot ding_talk_robot = 3;
+
+	/*
+	HTTP Request
+	*/
+	HTTPRequest http_request = 4;
+
+	/*
+	WeChat Robot
+	*/
+	WeChatRobot wechat_robot = 5;
+
+	/*
+	Mail Group
+	*/
+	MailGroup mail_group = 6;
+
+	/*
+	Feishu Robot
+	*/
+	FeishuRobot feishu_robot = 7;
+
+	/*
+	SMS
+	*/
+	SMS sms = 8;
+}
+/*
+*/
+message SMS {
+
+	/*
+	Phone Number List
+	*/
+	repeated string to = 1;
+}
+/*
+*/
+message WeChatRobot {
+
+	/*
+	Robot Call Address
+	*/
+	string webhook = 1;
+}

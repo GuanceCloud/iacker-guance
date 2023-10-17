@@ -1,0 +1,58 @@
+syntax = "proto3";
+
+package pkg.resources.blacklist.v1;
+
+option go_package = "github.com/GuanceCloud/openapi/pkg/resources/blacklist/v1;v1";
+
+/*
+*/
+message BlackList {
+
+	/*
+	Source
+	*/
+	Source source = 1;
+
+	/*
+	Filters
+	*/
+	repeated Filter filter_rules = 2;
+}
+/*
+*/
+message Filter {
+
+	/*
+	Name
+	*/
+	string name = 1;
+
+	/*
+	Operation
+	*/
+	string operation = 2;
+
+	/*
+	Condition, represented by DQL
+	*/
+	string condition = 3;
+
+	/*
+	Values
+	*/
+	repeated string values = 4;
+}
+/*
+*/
+message Source {
+
+	/*
+	Source Type
+	*/
+	string type = 1;
+
+	/*
+	Source
+	*/
+	optional string name = 2;
+}

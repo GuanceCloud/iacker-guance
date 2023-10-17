@@ -1,0 +1,45 @@
+syntax = "proto3";
+
+package pkg.resources.pipeline.v1;
+
+option go_package = "github.com/GuanceCloud/openapi/pkg/resources/pipeline/v1;v1";
+
+/*
+*/
+message Pipeline {
+
+	/*
+	Name
+	*/
+	string name = 1;
+
+	/*
+	Data source list
+	*/
+	repeated string source = 2;
+
+	/*
+	Pipeline file content
+	*/
+	string content = 3;
+
+	/*
+	Test data
+	*/
+	optional string test_data = 4;
+
+	/*
+	Is Force Overwrite
+	*/
+	optional bool is_force = 5;
+
+	/*
+	Category
+	*/
+	string category = 6;
+
+	/*
+	Is Default Pipeline
+	*/
+	optional bool is_default = 7;
+}

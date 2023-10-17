@@ -1,0 +1,20 @@
+syntax = "proto3";
+
+package pkg.resources.member.v1;
+
+option go_package = "github.com/GuanceCloud/openapi/pkg/resources/member/v1;v1";
+
+/*
+*/
+message Member {
+
+	/*
+	Email
+	*/
+	optional string email = 1;
+
+	/*
+	Role
+	*/
+	optional string role = 2;
+}

@@ -1,0 +1,214 @@
+syntax = "proto3";
+
+package pkg.resources.mute.v1;
+
+option go_package = "github.com/GuanceCloud/openapi/pkg/resources/mute/v1;v1";
+
+/*
+*/
+message Mute {
+
+	/*
+	Mute Ranges
+	*/
+	repeated MuteRange mute_ranges = 1;
+
+	/*
+	Notify Options
+	*/
+	NotifyOptions notify = 2;
+
+	/*
+	Notify targets
+	*/
+	repeated NotifyTarget notify_targets = 3;
+
+	/*
+	Onetime
+	*/
+	OnetimeOptions onetime = 4;
+
+	/*
+	Repeat
+	*/
+	RepeatOptions repeat = 5;
+
+	/*
+	Tags
+	*/
+	repeated Tag mute_tags = 6;
+}
+/*
+*/
+message MuteRange {
+
+	/*
+	Mute Range Type
+	*/
+	string type = 1;
+
+	/*
+	Monitor configuration
+	*/
+	MuteRangeMonitor monitor = 2;
+
+	/*
+	Alert Policy configuration
+	*/
+	MuteRangeAlertPolicy alert_policy = 3;
+}
+/*
+*/
+message MuteRangeAlertPolicy {
+
+	/*
+	Alert Policy ID
+	*/
+	string id = 1;
+}
+/*
+*/
+message MuteRangeMonitor {
+
+	/*
+	Monitor ID
+	*/
+	string id = 1;
+}
+/*
+*/
+message NotifyOptions {
+
+	/*
+	Notify Message
+	*/
+	optional string message = 1;
+
+	/*
+	Notify Time
+	*/
+	optional string before_time = 2;
+}
+/*
+*/
+message NotifyTarget {
+
+	/*
+	Notify Type
+	*/
+	string type = 1;
+
+	/*
+	MemberGroup
+	*/
+	NotifyTargetMemberGroup member_group = 2;
+
+	/*
+	Notification
+	*/
+	NotifyTargetNotification notification = 3;
+}
+/*
+*/
+message NotifyTargetMemberGroup {
+
+	/*
+	MemberGroup ID
+	*/
+	string id = 1;
+}
+/*
+*/
+message NotifyTargetNotification {
+
+	/*
+	Notification ID
+	*/
+	string id = 1;
+}
+/*
+*/
+message OnetimeOptions {
+
+	/*
+	Start
+	*/
+	optional string start = 1;
+
+	/*
+	End
+	*/
+	optional string end = 2;
+}
+/*
+*/
+message RepeatCrontabSet {
+
+	/*
+	Min
+	*/
+	optional string min = 1;
+
+	/*
+	Hour
+	*/
+	optional string hour = 2;
+
+	/*
+	Day
+	*/
+	optional string day = 3;
+
+	/*
+	Month
+	*/
+	optional string month = 4;
+
+	/*
+	Week
+	*/
+	optional string week = 5;
+}
+/*
+*/
+message RepeatOptions {
+
+	/*
+	Start
+	*/
+	optional string start = 1;
+
+	/*
+	End
+	*/
+	optional string end = 2;
+
+	/*
+	Crontab Duration
+	*/
+	optional string crontab_duration = 3;
+
+	/*
+	Repeat Expire
+	*/
+	optional string expire = 4;
+
+	/*
+	Crontab configuration
+	*/
+	RepeatCrontabSet crontab = 5;
+}
+/*
+*/
+message Tag {
+
+	/*
+	Tag
+	*/
+	string key = 1;
+
+	/*
+	Tag Value
+	*/
+	string value = 2;
+}

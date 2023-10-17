@@ -1,0 +1,20 @@
+syntax = "proto3";
+
+package pkg.resources.membergroup.v1;
+
+option go_package = "github.com/GuanceCloud/openapi/pkg/resources/membergroup/v1;v1";
+
+/*
+*/
+message MemberGroup {
+
+	/*
+	Name
+	*/
+	string name = 1;
+
+	/*
+	Member id list
+	*/
+	repeated string member_ids = 2;
+}
