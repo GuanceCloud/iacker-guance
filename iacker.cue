@@ -1,7 +1,7 @@
 package main
 
 import (
-	"github.com/GuanceCloud/iacker-guance/resources"
+	"github.com/GuanceCloud/iacker-guance/spec/resources"
 	terraform "github.com/GuanceCloud/iacker/templates/terraform/v1"
 	proto "github.com/GuanceCloud/iacker/templates/proto/v1"
 )

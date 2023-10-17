@@ -6,17 +6,17 @@ This is the Guance specification written by [Iacker](https://github.com/GuanceCl
 
 ## Contributing
 
-### Install Iacker
+**Install Iacker**
 
 ```bash
-go intall github.com/GuanceCloud/iacker/cmd/iacker
+go install github.com/GuanceCloud/iacker/cmd/iacker
 ```
 
-### Modify the specification
+**Modify the specification**
 
 Change the resource specification at [resources](./resources/).
 
-### Generate the target code
+**Generate the target code**
 
 ```bash
 iacker generate

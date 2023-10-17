@@ -12,7 +12,6 @@ import "github.com/GuanceCloud/iacker/pkg/resource/v1"
 		[string]: v1.#Error
 	} @protobuf(3,map[string]pkg.resource.v1.Error)
 	// map<string, pkg.template.v1.Manifest> templates = 4;
-
 }
 
 #Options: {

@@ -15,5 +15,5 @@ import (
 	{
 		template: "proto"
 		outdir:   ".build"
-	}
+	},
 ]
