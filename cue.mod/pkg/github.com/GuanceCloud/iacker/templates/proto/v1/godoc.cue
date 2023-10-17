@@ -8,7 +8,7 @@ import (
 
 // Generate godoc files
 for rsname, rsinfo in *inputs.resources | {} {
-	outputs: files: "\(strings.ToLower(rsname))/v1/doc.go": template.#File & {
+	outputs: files: "resources/\(strings.ToLower(rsname))/v1/doc.go": template.#File & {
 		_lowername: strings.ToLower(rsname)
 
 		content: """

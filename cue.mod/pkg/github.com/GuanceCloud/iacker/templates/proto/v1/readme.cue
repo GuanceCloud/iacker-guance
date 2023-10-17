@@ -7,7 +7,7 @@ import (
 )
 
 for rsname, rsinfo in *inputs.resources | {} {
-	outputs: files: "\(strings.ToLower(rsname))/v1/README.md": template.#File & {
+	outputs: files: "resources/\(strings.ToLower(rsname))/v1/README.md": template.#File & {
 		_lowername: strings.ToLower(rsname)
 
 		content: """

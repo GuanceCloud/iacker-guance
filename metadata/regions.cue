@@ -1,6 +1,6 @@
 regions: "hangzhou": {
 	partition: "cn"
-	region: "hangzhou"
+	region:    "hangzhou"
 	title: {
 		zh: "杭州"
 		en: "Hang Zhou"
@@ -14,8 +14,8 @@ regions: "hangzhou": {
 }
 
 regions: "ningxia": {
-  partition: "cn"
-	region: "ningxia"
+	partition: "cn"
+	region:    "ningxia"
 	title: {
 		zh: "宁夏"
 		en: "Ning Xia"
@@ -29,8 +29,8 @@ regions: "ningxia": {
 }
 
 regions: "zhangjiakou": {
-  partition: "cn"
-	region: "zhangjiakou"
+	partition: "cn"
+	region:    "zhangjiakou"
 	title: {
 		zh: "张家口"
 		en: "Zhang Jia Kou"
@@ -44,8 +44,8 @@ regions: "zhangjiakou": {
 }
 
 regions: "guangzhou": {
-  partition: "cn"
-	region: "guangzhou"
+	partition: "cn"
+	region:    "guangzhou"
 	title: {
 		zh: "广州"
 		en: "Guang Zhou"
@@ -59,8 +59,8 @@ regions: "guangzhou": {
 }
 
 regions: "oregon": {
-  partition: "global"
-	region: "oregon"
+	partition: "global"
+	region:    "oregon"
 	title: {
 		zh: "俄勒冈"
 		en: "Oregon"
