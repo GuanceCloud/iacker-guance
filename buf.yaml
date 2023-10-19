@@ -1,5 +1,8 @@
 version: v1
-name: buf.build/GuanceCloud/iacker-guance
+name: buf.build/guancecloud/iacker-guance
+build:
+  excludes:
+    - targets/
 breaking:
   use:
     - FILE

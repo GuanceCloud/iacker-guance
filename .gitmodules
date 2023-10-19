@@ -1,0 +1,9 @@
+[submodule "targets/kubevela"]
+	path = targets/kubevela
+	url = https://github.com/GuanceCloud/kubevela-addon-guance.git
+[submodule "targets/terraform"]
+	path = targets/terraform
+	url = https://github.com/GuanceCloud/terraform-provider-guance.git
+[submodule "targets/crossplane"]
+	path = targets/crossplane
+	url = https://github.com/GuanceCloud/crossplane-provider-guance.git
