@@ -23,7 +23,7 @@ import (
 
 	package pkg.resources.\( _lowername ).v1;
 
-	option go_package = "github.com/GuanceCloud/openapi/pkg/resources/\( _lowername )/v1;v1";
+	option go_package = "github.com/GuanceCloud/iakcer-server/pkg/resources/\( _lowername )/v1;v1";
 
 	"""
 
