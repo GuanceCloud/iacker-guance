@@ -11,7 +11,9 @@ Relationships:
 
 ```mermaid
 graph LR
-    A[Workspace] --> B[Member]
+
+	A[Workspace] --> B[Member]
+
 ```
 */
 package v1

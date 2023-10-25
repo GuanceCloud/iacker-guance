@@ -11,7 +11,9 @@ Relationships:
 
 ```mermaid
 graph LR
-    A[Mute Rule] --> B[Alert Policy]
+
+	A[Mute Rule] --> B[Alert Policy]
+
 ```
 */
 package v1

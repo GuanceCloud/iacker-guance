@@ -1,0 +1,79 @@
+{
+  "plural": "members",
+  "title": {
+    "zh": "工作空间成员",
+    "en": "Workspace Member"
+  },
+  "description": {
+    "zh": "工作空间成员是拥有工作空间访问权限的用户。\n\n观测云支持通过成员管理对当前工作空间的全部成员进行统一管理，包括设置角色权限、邀请成员并为成员设置权限、配置成员组、设置 SSO 单点登录等。\n\n关联：\n\n```mermaid\ngraph LR\n    A[Workspace] --> B[Member]\n```",
+    "en": "A workspace member is a user who has access to a workspace.\n\nGuance Cloud supports managing all members of the current workspace through member management, including setting role permissions, inviting members and setting permissions for members, configuring member groups, and setting SSO single sign-on.\n\nRelationships:\n\n```mermaid\ngraph LR\n    A[Workspace] --> B[Member]\n```"
+  },
+  "models": {
+    "Member": {
+      "properties": [
+        {
+          "name": "email",
+          "title": {
+            "zh": "邮箱",
+            "en": "Email"
+          },
+          "schema": {
+            "type": "string"
+          }
+        },
+        {
+          "name": "role",
+          "title": {
+            "zh": "角色",
+            "en": "Role"
+          },
+          "schema": {
+            "type": "string",
+            "enum": [
+              {
+                "name": "owner",
+                "value": "owner",
+                "title": {
+                  "zh": "拥有者",
+                  "en": "Owner"
+                }
+              },
+              {
+                "name": "administrator",
+                "value": "wsAdmin",
+                "title": {
+                  "zh": "管理员",
+                  "en": "Administrator"
+                }
+              },
+              {
+                "name": "standard",
+                "value": "general",
+                "title": {
+                  "zh": "标准成员",
+                  "en": "Standard"
+                }
+              },
+              {
+                "name": "read_only",
+                "value": "readOnly",
+                "title": {
+                  "zh": "只读成员",
+                  "en": "Read-only"
+                }
+              }
+            ]
+          }
+        }
+      ]
+    }
+  },
+  "meta": {
+    "datasource": true
+  },
+  "identifier": {
+    "primary": [
+      "/properties/username"
+    ]
+  }
+}
