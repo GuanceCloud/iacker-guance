@@ -4,6 +4,7 @@ import (
 	"github.com/GuanceCloud/iacker-guance/spec/resources"
 	terraform "github.com/GuanceCloud/iacker/templates/terraform/v1"
 	proto "github.com/GuanceCloud/iacker/templates/proto/v1"
+	server "github.com/GuanceCloud/iacker/templates/server/v1"
 )
 
 provider: "guance"
@@ -14,6 +15,7 @@ provider: "guance"
 "templates": {
 	"terraform": terraform
 	"proto":     proto
+	"server":    server
 }
 
 // Template options
@@ -26,10 +28,14 @@ provider: "guance"
 		},
 		{
 			"template": "terraform"
-			"outdir":   ".build/terraform"
+			"outdir":   "targets/terraform"
 			"vars": {
 				"provider": provider
 			}
+		},
+		{
+			"template": "server"
+			"outdir":   "targets/server"
 		},
 	]
 }
